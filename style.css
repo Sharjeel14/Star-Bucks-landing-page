@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700;800;900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  width: 100%;
+}
+header .logo {
+  position: relative;
+  max-width: 80px;
+}
+header ul {
+  position: relative;
+  display: flex;
+}
+header ul li a {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 10px;
+  color: #333;
+  font-weight: 400;
+}
+header ul li a:hover {
+  background-color: #017143;
+  color: #fff;
+  border-radius: 30px;
+}
+.content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.content .textBox {
+  position: relative;
+  max-width: 600px;
+}
+.content .textBox h2 {
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4em;
+  font-size: 4em;
+}
+.textBox h2 span {
+  color: #017143;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+.content .textBox p {
+  color: #333;
+}
+.content .textBox a {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #017143;
+  color: #fff;
+  padding: 8px 20px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 40px;
+}
+.content .imgBox {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+  width: 600px;
+}
+.starbucks {
+  max-width: 340px;
+}
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(600px at right 800px);
+  background: #017143;
+}
+.thumb {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.thumb li {
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 20px;
+  transition: 0.5s;
+}
+.thumb li img {
+  max-width: 60px;
+}
+.thumb li:hover {
+  transform: translateY(-15px);
+}
+.social {
+  display: flex;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translatey(-50%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.social li a {
+  display: inline-block;
+  filter: invert(1);
+  transform: scale(0.5);
+  margin: 5px 0;
+}
+@media (max-width: 991px) {
+  header {
+    padding: 20px;
+  }
+  header .logo {
+    max-width: 60px;
+  }
+  header ul {
+    display: none;
+  }
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(img/menu.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    z-index: 11;
+  }
+  .toggle.active {
+    position: fixed;
+    right: 20px;
+    background: url(img/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(1);
+  }
+  .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    flex-direction: column;
+    z-index: 10;
+  }
+  section {
+    padding: 20px 20px 120px;
+  }
+  .content {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .content .textBox h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  .content .textBox {
+    max-width: 100%;
+  }
+  .content .imgBox {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .content .imgBox img {
+    max-width: 300px;
+  }
+  .thumb li img {
+    max-width: 40px;
+  }
+  .circle {
+    clip-path: circle(400px at center bottom);
+  }
+  .social {
+    background: #017143;
+    right: 0;
+    width: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+}
